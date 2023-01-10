@@ -133,7 +133,7 @@ Now comes the confusion: should we candy crush both major12 to the other element
 
 Here is the key of Boyer–Moore: why we can get the major element? cause we are making pairs using the array elment, whether its a double pair or triple pair. Once we have a pair, we deduct them away. And since we are making pairs out of the original array, the max amount of one character is 1/2 or 1/3 in all the deducted pairs. and whats left is the two majority (you have extra elements that cant be count into the pairs).
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 And what's left is to see if the count is larger than n/3. We can simply count those elements to see if it works.
 

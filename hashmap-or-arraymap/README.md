@@ -24,7 +24,7 @@ class Solution:
 
 But then i found its a bit slow in the summary. Can we do better?
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Yes. We can use an 26 length array to store the map of alphabetic characters.&#x20;
 
