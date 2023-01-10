@@ -31,7 +31,7 @@
   * [maximum subarray](dynamic-programming/maximum-subarray.md)
 * [Math, Digit add up](math-digit-add-up.md)
 * [Array, Intervals](array-intervals/README.md)
-  * [Page 1](array-intervals/page-1.md)
+  * [Intervals](array-intervals/intervals.md)
 * [Matrix](matrix.md)
 * [K element](k-element.md)
 * [Duplicate, hashset, sliding window, hashmap](duplicate-hashset-sliding-window-hashmap.md)
