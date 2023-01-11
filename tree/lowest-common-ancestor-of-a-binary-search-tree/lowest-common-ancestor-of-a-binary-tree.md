@@ -1,12 +1,11 @@
-# Lowest Common Ancestor of a Binary Search Tree
+# Lowest Common Ancestor of a Binary Tree
 
-{% embed url="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/" %}
+```python
+```
 
-I am too hungry so didnt see the "BST" tag. since its a search tree, it is much easier.\
-\
-The find common ancestor in normal binary tree is acctually a little harder. I failed to solve it though.
+{% embed url="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/" %}
 
-in bst its an easy problem: both val < rootval then left subtree, both larger then right subtree. p.val and q.val in two side of the root.val, then in different subtree, different side, then this root is the lowest common ancestor.
+## Update Self Solved it second time:
 
 ```python
 # Definition for a binary tree node.
@@ -18,16 +17,22 @@ in bst its an easy problem: both val < rootval then left subtree, both larger th
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if root.val > p.val and root.val > q.val:
-            return self.lowestCommonAncestor(root.left, p, q)
-        elif root.val < p.val and root.val < q.val:
-            return self.lowestCommonAncestor(root.right, p, q)
-        else:
+        if root == None or root == p or root == q:
             return root
-
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        if (left == p and right == q) or (left == q and right == p):
+            return root
+        if left:
+            return left
+        else:
+            return right
+        
 ```
 
-{% embed url="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/" %}
+so we use the postorder recursion to touch the node.  if we postorderly find both node in left and right side, then that node is the ancestor.
+
+## Fail to solve first time
 
 > It's recursive and expands the meaning of the function. If the current (sub)tree contains both p and q, then the function result is their LCA. If only one of them is in that subtree, then the result is that one of them. If neither are in that subtree, the result is null/None/nil.
 
